@@ -1,33 +1,35 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-}
 
-@media (prefers-color-scheme: dark) {
+
   :root {
     --foreground-rgb: 255, 255, 255;
     --background-start-rgb: 0, 0, 0;
     --background-end-rgb: 0, 0, 0;
+    --primary-100: #0D6E6E;
+    --primary-200: #4a9d9c;
+    --primary-300: #afffff;
+    --accent-100: #FF3D3D;
+    --accent-200: #ffe0c8;
+    --text-100: #FFFFFF;
+    --text-200: #e0e0e0;
+    --bg-100: #0D1F2D;
+    --bg-200: #1d2e3d;
+    --bg-300: #354656;
   }
-}
 
 body {
   color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  background: var(--bg-100)
 }
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
+button {
+  background-color: var(--accent-100);
+}
+
+button:hover {
+  background-color: var(--accent-200);
+  color: var(--bg-200);
 }
